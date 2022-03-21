@@ -2,8 +2,16 @@ package fr.doranco.ecommerce.entity.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Order {
-		
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "order_id")
 	private int id;
 	private int number;
 	private String dateCreate;
